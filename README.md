@@ -13,7 +13,6 @@ Field Trip is an app that allows a user to see airlines, flights, and passengers
 When you run `bundle exec rspec` you should have 0 tests.
 
 ## Instructions
-​
 * Work on this assessment independently. DO NOT discuss with anyone.
 * Fork the assessment repository
 * Clone your fork
@@ -22,7 +21,6 @@ When you run `bundle exec rspec` you should have 0 tests.
 * Complete the stories below
 * Commit Frequently (at least every 10-15 minutes)
 * Push your code to your fork once the time is up (not before!)
-​
 ## Database information
 * Airlines have a name 
  (Ex: Airline.create(name: “Frontier”))
