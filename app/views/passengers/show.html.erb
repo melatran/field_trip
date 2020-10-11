@@ -6,3 +6,14 @@
     <p>Flight <%= link_to flight.number, "/flights/#{flight.id}" %></p>
   <% end %>
 </section>
+
+<section class="new_flight">
+  <h2>Add New Flight</h2>
+  <%= form_tag "/passengers/#{@passenger.id}" do%>
+    <p>Fill information with the flight number</p>
+    <%= label_tag :flight_number%>
+    <%= text_field_tag :number %>
+
+    <%= submit_tag "Add Flight"%>
+  <% end %>
+</section>
