@@ -7,11 +7,16 @@
 <h3>Airline: <%= @flight.airline.name %></h3>
 <br>
 <h2>Passengers On Board</h2>
-
 <section class="passengers">
   <% @flight.passengers.each do |passenger|%>
     <ul>
       <li><%= passenger.name %></li>
     </ul>
   <% end %>
+<br>
+<h2>Passenger Information</h2>
+<p>Number of Minors: <%= @flight.count_minors %></p>
+<p>Number of Adults: <%= @flight.count_adults %></p>
 </section>
+
+

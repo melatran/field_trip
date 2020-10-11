@@ -12,7 +12,7 @@ describe "Flight's Show Page" do
                     airline_id: @south_west.id)
     @holiday = Passenger.create(name: "Holiday", age: 30)
     @dexter = Passenger.create(name: "Dexter", age: 3)
-    @manny = Passenger.create(name: "Manny", age: 18)
+    @manny = Passenger.create(name: "Manny", age: 19)
     PassengerFlight.create(passenger_id: @holiday.id, flight_id: @flight1.id)
     PassengerFlight.create(passenger_id: @dexter.id, flight_id: @flight1.id)
     PassengerFlight.create(passenger_id: @manny.id, flight_id: @flight1.id)
@@ -33,5 +33,12 @@ describe "Flight's Show Page" do
       expect(page).to have_content("Dexter")
       expect(page).to have_content("Manny")
     end
+  end
+
+  it "lists the number of minors and number of adults" do
+    visit "/flights/#{@flight1.id}"
+   
+    expect(page).to have_content("Number of Adults: 2")
+    expect(page).to have_content("Number of Minors: 1")
   end
 end
